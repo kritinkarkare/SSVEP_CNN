@@ -20,9 +20,9 @@ def main():
     batch_size = 10
     for i in range(0, 10):
         
-        print("The number of epochs is " + str(epochs)
+        print("The number of epochs is " + str(epochs))
         score = UIExperiment(batch_size, epochs, validation_split)
-        scores_epoch = np.concatenate(score(scores_epoch, score))
+        scores_epoch = np.concatenate((scores_epoch, score))
         epochs = epochs + 5
     
     '''
