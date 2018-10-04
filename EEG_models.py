@@ -63,4 +63,6 @@ def ShallowConvNet(input_shape):
     dense        = Dense(n_class, kernel_constraint = max_norm(0.5))(flatten)
     softmax      = Activation('softmax')(dense)
     
+    
     return Model(inputs=input_EEG, outputs=softmax)
+    

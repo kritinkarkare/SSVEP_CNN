@@ -88,7 +88,7 @@ def UIExperiment(batch_siz, num_epoch, val_split):
     
     plt.plot(fit_hist.history['loss'])
     plt.plot(fit_hist.history['val_loss'])
-    return score
+    return fit_hist.history['loss'], fit_hist.history['val_loss'],fit_hist.history['acc'],fit_hist.history['val_acc'], score[0], score[1]
 
 
 
